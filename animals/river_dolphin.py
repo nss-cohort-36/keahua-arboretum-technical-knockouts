@@ -23,7 +23,3 @@ class RiverDolphin(Animal, Identifiable):
     def __str__(self):
         return f'Dolphin {self.id}. Eeee EeeEEeeeeEE!'
 
-
-
-flipper = RiverDolphin()
-print(flipper.food)
