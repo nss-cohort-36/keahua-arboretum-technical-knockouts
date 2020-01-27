@@ -6,3 +6,4 @@ class Spider(Animal, Identifiable):
         Animal.__init__(self)
         Identifiable.__init__(self)
         self.food = ["Flies", "Ants", "Moths"]
+        self.name = "Hawaiian Happy-Face Spider"

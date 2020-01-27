@@ -1,20 +1,19 @@
 class Animal:
     def __init__(self):
-        self.__species = ""
-        # self.age = 0
+        self.__name = ""
         self.__food = ["random food"]
-        self.__allowed_habitats = []
+        # self.__allowed_habitats = []
 
     @property
-    def species(self):
-        return self.__species
+    def name(self):
+        return self.__name
 
-    @species.setter
-    def species(self, species):
-        if type(species) is str:
-            self.__species = species
+    @name.setter
+    def name(self, name):
+        if type(name) is str:
+            self.__name = name
         else:
-            return "Please input a string for the species name!"
+            return "Please input a string for the name!"
 
     @property
     def food(self):
@@ -37,6 +36,3 @@ class Animal:
             self.__allowed_habitats = allowed_habitats
         else:
             return "Please input a list of habitats for the animal."
-    
-
- 
