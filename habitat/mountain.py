@@ -5,7 +5,7 @@ from interfaces import Ihas_animals
 
 
 
-class Mountain():
+class Mountain(IContainsAnimals, IContainsPlants, Identifiable):
 
      def __init__(self):
       IContainsAnimals.__init__(self)
