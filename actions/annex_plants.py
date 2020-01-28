@@ -20,7 +20,6 @@ def annex_plants(arboretum):
 
     if choice == "1":
         new_plant = MountainAppleTree()
-
     if choice == "2":
         new_plant = Silversword()
 
@@ -29,9 +28,30 @@ def annex_plants(arboretum):
 
     if choice == "4":
         new_plant = BlueJadeVine()
+
+    # We want to print the list of habitats that we are allowed to plant in (amount of plants and habitat)
+    # WE need to make an array of all the habits to loop over    
+    # list_of_habitats = []
+    # list_of_habitats.extend(arboretum.rivers)
+    # list_of_habitats.extend(arboretum.swamps)
+    # list_of_habitats.extend(arboretum.coastlines)
+    # list_of_habitats.extend(arboretum.grasslands)
+    # list_of_habitats.extend(arboretum.mountains)
+    # list_of_habitats.extend(arboretum.forests)
+
+    #  Add the enumeration thing to have an index value (ex: make pizza function in pizza exercise)
+    # for habitat in list_of_habitats:
+        # if new_plant.name in habitat.plants_allowed
+
+        # "name" in new_plant.name is referring to the name of each plant declared in each habitat class
+    
+    
+
+
+
        
 
-
+    
 # Not exact, but a model for making the next menu dynamically
     # for index, river in enumerate(arboretum.rivers):
     #     print(f'{index + 1}. River {river.id}')
