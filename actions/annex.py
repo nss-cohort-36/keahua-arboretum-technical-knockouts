@@ -36,3 +36,4 @@ def annex_habitat(arboretum):
     if choice == "6":
         forest = Forest()
         arboretum.forests.append(forest)
+
