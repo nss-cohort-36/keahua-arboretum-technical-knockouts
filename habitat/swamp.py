@@ -4,7 +4,6 @@ from interfaces import IContainsAnimals
 from interfaces import IContainsPlants
 from interfaces import Identifiable
 
-
 # from animals.
 
 # NEEDS TO INHERIT FROM ENVIRONMENT
