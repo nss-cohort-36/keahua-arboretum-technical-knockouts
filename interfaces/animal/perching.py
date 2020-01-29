@@ -1,6 +1,5 @@
 from ..animal import ITerrestrial
 
-class IWalking(ITerrestrial):
+class IPerching(ITerrestrial):
     def __init__(self):
-        self.walking = True
-
+        self.perching = True
