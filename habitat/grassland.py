@@ -14,7 +14,7 @@ class Grassland(IContainsAnimals, IContainsPlants, Identifiable):
       Identifiable.__init__(self)
       self.plants_allowed = ["silversword", "blue jade vine"]
       self.plants_capacity = 15
-      Ihas_plants.__init__(self)
+    #   Ihas_plants.__init__(self)
       Ihas_animals.__init__(self)
 
       def add_animal(self, animal):
