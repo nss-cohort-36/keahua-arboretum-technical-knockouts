@@ -17,10 +17,6 @@ class Grassland(IContainsAnimals, IContainsPlants, Identifiable):
     #   Ihas_plants.__init__(self)
       Ihas_animals.__init__(self)
 
-      
-      
-  
-
       def add_animal(self, animal):
         try:
             if animal.fly:
