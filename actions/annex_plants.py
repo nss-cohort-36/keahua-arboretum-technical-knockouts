@@ -32,12 +32,25 @@ def annex_plants(arboretum):
     # We want to print the list of habitats that we are allowed to plant in (amount of plants and habitat)
     # WE need to make an array of all the habits to loop over    
     # list_of_habitats = []
-    # list_of_habitats.extend(arboretum.rivers)
-    # list_of_habitats.extend(arboretum.swamps)
-    # list_of_habitats.extend(arboretum.coastlines)
-    # list_of_habitats.extend(arboretum.grasslands)
-    # list_of_habitats.extend(arboretum.mountains)
-    # list_of_habitats.extend(arboretum.forests)
+    # list_of_habitats.extend(arboretum.river)
+    # list_of_habitats.extend(arboretum.swamp)
+    # list_of_habitats.extend(arboretum.coastline)
+    # list_of_habitats.extend(arboretum.grassland)
+    # list_of_habitats.extend(arboretum.mountain)
+    # list_of_habitats.extend(arboretum.forest)
+
+    selected_plant_habitats = new_plant.possible_habitats
+    
+    for habitat in selected_plant_habitats:
+        if habitat == "grasslands":
+            if arboretum.grasslands == []:
+                print(f'There are no avialable {habitat}')
+                input(f"press Enter to continue")
+
+                
+
+
+
 
     #  Add the enumeration thing to have an index value (ex: make pizza function in pizza exercise)
     # for habitat in list_of_habitats:
