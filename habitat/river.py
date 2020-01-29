@@ -26,3 +26,8 @@ class River(IContainsAnimals, IContainsPlants, Identifiable):
                 self.plants.append(plant)
         except AttributeError:
             raise AttributeError("Cannot add plants that require brackish water or stagnant water to a river biome")
+    def check_animal(self, animal):
+        if animal.cell_type == "isotonic" or animal.cell_type == "hypotonic":
+            return True
+        else:
+            return False

@@ -24,8 +24,7 @@ class Coastline(IContainsAnimals, IContainsPlants, Identifiable):
             raise AttributeError("Cannot add plants that require brackish water or stagnant water to a Grassland biome")
 
     def check_animal(self, animal):
-        try:
-            if animal.cell_type == "isotonic" or animal.cell_type == "hypotonic":
-                self.add_animal(animal)
-        except AttributeError:
-            raise AttributeError("Cannot add animal to this biome.")
+        if animal.cell_type == "isotonic" or animal.cell_type == "hypotonic":
+            return True
+        else:
+            return False
