@@ -1,4 +1,4 @@
-from ..animal import IAquatic
+from .aquatic import IAquatic
 
 class ISaltFresh(IAquatic):
 

@@ -2,6 +2,11 @@ from .freshwater import IFreshwater
 from .aquatic import IAquatic
 from .flying import IFlying
 from .saltwater import ISaltwater
-from .swimming import ISwimming
 from .terrestrial import ITerrestrial
 from .walking import IWalking
+from .aquatic_prey import IAquaticPrey
+from .cave_dwelling import ICaveDwelling
+from .climbing import IClimbing
+from .flying import IFlying
+from .perching import IPerching
+from .salt_fresh import ISaltFresh
