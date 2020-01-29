@@ -14,7 +14,7 @@ class IContainsPlants:
         if type(plant) is Plant:
             self.__plants.append(plant)
         else:
-            return f''
+            return "Please pass a Plant object as the argument"
 
     @property
     def number_of_plants(self):
