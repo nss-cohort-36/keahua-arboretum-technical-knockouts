@@ -7,7 +7,7 @@ from plants import BlueJadeVine
 
 
 
-def annex_plants(arboretum):
+def annex_plants(kehua):
     os.system('cls' if os.name == 'nt' else 'clear')
     print("1. Mountain Apple Tree")
     print("2. Silversword")
@@ -31,60 +31,30 @@ def annex_plants(arboretum):
 
     # We want to print the list of habitats that we are allowed to plant in (amount of plants and habitat)
     # WE need to make an array of all the habits to loop over    
-    # list_of_habitats = []
-    # list_of_habitats.extend(arboretum.river)
-    # list_of_habitats.extend(arboretum.swamp)
-    # list_of_habitats.extend(arboretum.coastline)
-    # list_of_habitats.extend(arboretum.grassland)
-    # list_of_habitats.extend(arboretum.mountain)
-    # list_of_habitats.extend(arboretum.forest)
+    allowed_habitats = []
+    all_habitats = []
+    # list_of_habitats.extend(kehua.rivers)
+    # list_of_habitats.extend(kehua.swamps)
+    # list_of_habitats.extend(kehua.coastlines)
+    all_habitats.extend(kehua.grasslands)
+    all_habitats.extend(kehua.mountains)
+    # list_of_habitats.extend(kehua.forests)
 
-    selected_plant_habitats = new_plant.possible_habitats
+    # filtering out habitats to grab the suitable habitats for each plant
+    for habitat in all_habitats:
+        if new_plant.name in habitat.plants_allowed:
+            allowed_habitats.append(habitat)
+
+
+    # we are displaying the suitable habitats in menu form so you need a dynamic menu that displays with an index (by number)
     
-    for habitat in selected_plant_habitats:
-        if habitat == "grasslands":
-            if arboretum.grasslands == []:
-                print(f'There are no avialable {habitat}')
-                input(f"press Enter to continue")
+    os.system('cls' if os.name == 'nt' else 'clear')
+    for i,habitat in enumerate(allowed_habitats):
+        print(f'{i+1}. {habitat.__class__.__name__}')
+
+    choice = input("Chose your habitat > ")
+
+    selected_habitat = allowed_habitats[choice - 1]
+
 
                 
-
-
-
-
-    #  Add the enumeration thing to have an index value (ex: make pizza function in pizza exercise)
-    # for habitat in list_of_habitats:
-        # if new_plant.name in habitat.plants_allowed
-
-        # "name" in new_plant.name is referring to the name of each plant declared in each habitat class
-    
-    
-
-
-
-       
-
-    
-# Not exact, but a model for making the next menu dynamically
-    # for index, river in enumerate(arboretum.rivers):
-    #     print(f'{index + 1}. River {river.id}')
-
-    # print("Release the animal into which biome?")
-    # choice = input("> ")
-
-
-
-# def annex_habitat(arboretum):
-#     os.system('cls' if os.name == 'nt' else 'clear')
-#     print("1. River")
-#     print("2. Swamp")
-#     print("3. Coastline")
-#     print("4. Grassland")
-
-#     choice = input("Choose your habitat > ")
-
-#     if choice == "1":
-#         river = River()
-#         arboretum.rivers.append(river)
-#     if choice == "2":
-#         pass

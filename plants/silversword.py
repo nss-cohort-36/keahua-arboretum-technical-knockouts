@@ -4,7 +4,7 @@ class Silversword(Plants):
     def __init__(self):
       super().__init__()
       self.location =""
-      self.name = "Silversword"
+      self.name = "silversword"
       # self.possible_habitats.append("grasslands")
  
 
